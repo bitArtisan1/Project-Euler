@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
-
 
 using namespace std;
 
@@ -29,7 +27,6 @@ vector<int> sieveOfEratosthenes(long long n){
 }
 
 long long sumPrime(vector<int> prime){
-	
 	long long sum = 0;
 	
 	for(int i = 0 ; i < prime.size() ; i++){
