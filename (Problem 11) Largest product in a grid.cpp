@@ -29,7 +29,7 @@ int searchHorizontally(){
     
     for(int i = 0 ; i < Matrix.size() ; i++){
         for(int j = 0 ; j < Matrix[i].size() - 3 ; j++){
-            for(int k = 0 ; k < 4 && j + k < Matrix[i].size(); k++){
+            for(int k = 0 ; k < 4 && j + k < Matrix[i].size() ; k++){
             	
             multiple *= Matrix[i][j + k];
             }
@@ -48,7 +48,7 @@ int searchVertically(){
     
     for(int i = 0 ; i < Matrix.size() - 3 ; i++){
         for(int j = 0 ; j < Matrix[i].size() ; j++){
-            for(int k = 0 ; k < 4 && i + k < Matrix.size(); k++){
+            for(int k = 0 ; k < 4 && i + k < Matrix.size() ; k++){
                 multiple *= Matrix[i + k][j];
                 
             }
@@ -67,7 +67,7 @@ int searchDiagonally(){
     
     for(int i = 0 ; i < Matrix.size() - 3 ; i++){
         for(int j = 0 ; j < Matrix[i].size() - 3 ; j++){
-            for(int k = 0 ; k < 4; k++){
+            for(int k = 0 ; k < 4 ; k++){
             	
                 multiple *= Matrix[i+k][j+k];
             }
@@ -81,7 +81,7 @@ int searchDiagonally(){
     
     for(int i = 3 ; i < Matrix.size() ; i++){
         for(int j = 0 ; j < Matrix[i].size() - 3 ; j++){
-            for(int k = 0 ; k < 4; k++){
+            for(int k = 0 ; k < 4 ; k++){
             	
                 multiple *= Matrix[i-k][j+k];
             }
