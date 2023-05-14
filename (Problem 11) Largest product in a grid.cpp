@@ -64,7 +64,7 @@ int searchVertically(){
 
 int searchDiagonally(){
     int multiple = 1, greatest = 1;
-    
+    // Searchs Top Left 2 Bottom Right
     for(int i = 0 ; i < Matrix.size() - 3 ; i++){
         for(int j = 0 ; j < Matrix[i].size() - 3 ; j++){
             for(int k = 0 ; k < 4 ; k++){
@@ -78,7 +78,7 @@ int searchDiagonally(){
         multiple = 1;
         }
     }
-    
+    // Searchs Top Right 2 Bottom Left
     for(int i = 3 ; i < Matrix.size() ; i++){
         for(int j = 0 ; j < Matrix[i].size() - 3 ; j++){
             for(int k = 0 ; k < 4 ; k++){
@@ -97,8 +97,8 @@ int searchDiagonally(){
 int main() {
 	
     int a = searchHorizontally();
-	int b = searchVertically();
-	int c = searchDiagonally();
+    int b = searchVertically();
+    int c = searchDiagonally();
     int greatest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
     
     cout << greatest;
