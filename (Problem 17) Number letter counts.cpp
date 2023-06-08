@@ -38,35 +38,35 @@ std::string number2Word() {
     int totalLetters = 0;
     std::string spelling;
     
-    for (int i = 1 ; i <= 1000 ; i++){
+    for(int i = 1 ; i <= 1000 ; i++){
         int units, tenths, hundredths;
         units = i % 10;
         tenths = ((i / 10) % 10 )* 10;
         hundredths = (i / 100) % 10;
 
-        if (hundredths != 0){
+        if(hundredths != 0){
             spelling += dictionary[hundredths] + " hundred";
 
-            if (tenths != 0 || units != 0)
+            if(tenths != 0 || units != 0)
                 spelling += " and ";
         }
-        if (tenths == 10)
+        if(tenths == 10)
             spelling += dictionary[tenths + units];
-        else if (tenths != 0){
+        else if(tenths != 0){
             spelling += dictionary[tenths];
 
-            if (units != 0)
+            if(units != 0)
                 spelling += " " + dictionary[units];
         }
-        else if (units != 0)
+        else if(units != 0)
             spelling += dictionary[units];
-        if (i == 1000){
+        if(i == 1000){
             spelling = "one thousand";
         }
         
         int letterCount = 0;
-        for (char c : spelling){
-            if (c != ' ')
+        for(char c : spelling){
+            if(c != ' ')
                 letterCount++;
         }
         totalLetters += letterCount;
