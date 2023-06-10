@@ -58,7 +58,7 @@ int main() {
 
     sort(names.begin(), names.end());
 
-    for (const auto& name : names) {
+    for (const auto& name : names) { // Print sorted names
         cout << name << " ";
     }
     cout << endl;
@@ -93,7 +93,7 @@ int main() {
     };
 
     int totalScore = 0;
-    for (size_t i = 0; i < names.size(); i++) {
+    for (size_t i = 0; i < names.size(); i++) { // Calculate total scores
         int nameScore = calculateNameScore(names[i], alphabetDictionary);
         int nameWeightedScore = nameScore * (i + 1);
         totalScore += nameWeightedScore;
